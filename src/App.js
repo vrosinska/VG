@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import Navigation from "./components/Nav/Navigation";
+// import Footer from "./components/Footer/Footer";
+import Background from "./components/Background/Background";
+// import About from "./components/About/About";
+// import Offer from "./components/Offer/Offer";
+// import Portfolio from "./components/Portfolio/Portfolio";
+// import Contact from "./components/Contact/Contact";
+import {
+  // Route,
+  Switch,
+  HashRouter
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <HashRouter>
+        <div className="App">
+          <Background/>
+          {/*<Navigation/>*/}
+          <div className="Content">
+            <Switch>
+              {/*<Route exact path="/about" component={About}/>*/}
+              {/*<Route exact path="/offer" component={Offer}/>*/}
+              {/*<Route exact path="/portfolio" component={Portfolio}/>*/}
+              {/*<Route exact path="/contact" component={Contact}/>*/}
+              {/*<Route path="/" component={Home}/>*/}
+            </Switch>
+          </div>
+          {/*<Footer/>*/}
+        </div>
+      </HashRouter>
   );
 }
 
