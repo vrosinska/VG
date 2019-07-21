@@ -1,5 +1,5 @@
 import React from 'react';
-// import Navigation from "./components/Nav/Navigation";
+import Navigation from "./components/Nav/Navigation";
 // import Footer from "./components/Footer/Footer";
 import Background from "./components/Background/Background";
 // import About from "./components/About/About";
@@ -18,7 +18,7 @@ function App() {
       <HashRouter>
         <div className="App">
           <Background/>
-          {/*<Navigation/>*/}
+          <Navigation/>
           <div className="Content">
             <Switch>
               {/*<Route exact path="/about" component={About}/>*/}
