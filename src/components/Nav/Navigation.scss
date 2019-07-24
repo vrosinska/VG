@@ -4,15 +4,31 @@
   height: 8vh;
   min-height: 70px;
 }
+
 .navitems {
   justify-content: space-between;
   display: flex;
+  margin-right: 2px;
 }
+
 .navcartitems {
   color: #A00000;
 }
+
 @media (max-width: 400px) {
   .navcartitems {
     display: none;
+  }
+}
+
+@media (min-width: 260px) {
+  .navitems {
+    margin-right: 6px;
+  }
+}
+@media (max-height: 300px), (max-width:260px) {
+  .logo {
+    height: 8vh;
+    min-height: 50px;
   }
 }
