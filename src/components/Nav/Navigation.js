@@ -6,11 +6,12 @@ import styles from './Navigation.scss'
 import './Navigation_Override.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import Media from 'react-bootstrap/Media';
 
 function Navigation() {
 
     return (
-        <Navbar collapseOnSelect className="fixed-top" bg="transparent" expand="md">
+        <Navbar collapseOnSelect className="fixed-top" bg="transparent" expand="md" style={{paddingLeft:'4px', paddingRight:'4px'}}>
             <Navbar.Brand href="#home">
                 <img className={styles.logo} src={logo.logoImage} alt=""/>
             </Navbar.Brand>
@@ -18,7 +19,7 @@ function Navigation() {
                 <Nav.Link className="nav-link-cart" href="#cart">
                     <ul className="navbar-nav ml-auto flex-row">
                         <li className="dropdown">
-                            <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
+                            <Media tag="a" href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
                                     <span>
                                         <FontAwesomeIcon className="mr-1" icon={faShoppingCart}
@@ -26,7 +27,7 @@ function Navigation() {
                                                          <span className={styles.navcartitems}>7
                                                              - Items</span>
                                     </span>
-                                <span className="caret"></span></a>
+                                <span className="caret"></span></Media>
                             {/*        <ul className="dropdown-menu dropdown-cart" role="menu">*/}
                             {/*            <li>*/}
                             {/*  <span className="item">*/}
@@ -52,7 +53,7 @@ function Navigation() {
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
 
             </div>
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse className="navCollapse" id="basic-navbar-nav">
 
                     <Nav className="mr-auto">
                         <Nav.Link href="#portraits">Self-portraits</Nav.Link>
