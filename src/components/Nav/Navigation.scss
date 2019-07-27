@@ -1,5 +1,14 @@
 @import '../../styles/general.scss';
 
+.solid {
+  background-color: rgba(255, 255, 255, 0.95)
+}
+
+.jsnav {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 .logo {
   height: 8vh;
   min-height: 70px;
@@ -11,8 +20,12 @@
   margin-right: 2px;
 }
 
+.navcart {
+  color: $color-main;
+}
+
 .navcartitems {
-  color: #A00000;
+  color: $color-main;
 }
 
 @media (max-width: 400px) {
@@ -26,7 +39,8 @@
     margin-right: 6px;
   }
 }
-@media (max-height: 300px), (max-width:260px) {
+
+@media (max-height: 300px), (max-width: 260px) {
   .logo {
     height: 8vh;
     min-height: 50px;

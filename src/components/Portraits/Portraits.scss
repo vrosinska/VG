@@ -1,0 +1,64 @@
+@import '../../styles/general.scss';
+
+.container {
+  padding-top: 60px;
+}
+
+.thumbCont {
+  margin: auto;
+}
+
+.rowCont {
+  margin: auto auto 60px auto;
+  max-width: 90vw;
+}
+
+.name {
+  margin: 0;
+  color: $color-grey;
+}
+
+h4 {
+  color: $color-grey;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imgCont {
+  position: relative;
+}
+
+.overview {
+  transition: 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: right;
+  padding: 12px 12px 0 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top right, transparent, transparent, transparent, rgba(64, 64, 64, 1) 95%);
+  color: $light;
+
+  a {
+    font-size: 20px;
+  }
+}
+
+.thumbCont:hover .image {
+  opacity: 0.5;
+}
+
+.thumbCont:hover .overview {
+  opacity: 1;
+}
