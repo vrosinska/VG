@@ -3,7 +3,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 150% 150%;
-  }
+  background-attachment: fixed;
+}
+
 body::after {
   content: "";
   background: white;

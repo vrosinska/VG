@@ -1,3 +1,7 @@
+.navbar {
+    transition: background-color 1s ease 0s;
+}
+
 .dropdown-toggle {
     color: #A00000;
     align-items: center;
@@ -12,6 +16,9 @@ a.nav-link-cart :hover {
     text-decoration: none;
 }
 
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: rgba(64, 64, 64, 1);
+}
 
 @media (max-width: 400px) {
     .nav-link-cart {
@@ -30,6 +37,7 @@ a.nav-link-cart :hover {
         background: url("./../../../public/images/background.jpg");
     }
 }
+
 @media (min-width: 768px) {
     .nav-link-cart {
         display: block;
@@ -38,14 +46,13 @@ a.nav-link-cart :hover {
         right: 1vw;
         margin-top: -20px;
     }
+
     .navbar-light .navbar-nav .nav-link {
         color: #A00000;
         padding: 0 30px;
         font-size: 20px;
-
     }
 }
-
 
 @media (min-width: 401px) and (max-width: 767px) {
     .nav-link-cart {
@@ -53,11 +60,12 @@ a.nav-link-cart :hover {
         padding: .5rem 1rem;
         right: 1vw;
     }
+
     .navbar-light .navbar-nav .nav-link {
         color: #E5E5E5;
         padding: 0 30px;
         font-size: 20px;
         background-color: #A00000;
-            }
+    }
 }
 
