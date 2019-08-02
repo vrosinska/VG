@@ -1,0 +1,21 @@
+@import '../../styles/general.scss';
+
+.container {
+  margin: auto;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.quest {
+  font-weight: bold;
+}
+
+.answer {
+  padding-bottom: 15px;
+}
+
+.qNa {
+  padding-right: 5%;
+  padding-left: 5%;
+}

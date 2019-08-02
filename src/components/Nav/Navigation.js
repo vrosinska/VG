@@ -36,7 +36,7 @@ class Navigation extends React.Component {
                     <img className={styles.logo} src={logo.logoImage} alt=""/>
                 </Navbar.Brand>
                 <div className={styles.navitems}>
-                    <Nav.Link className="nav-link-cart" href="#cart">
+                    <Nav.Link className="nav-link-cart" href="#cartpage">
                         <ul className="navbar-nav ml-auto flex-row">
                             <li className="dropdown">
                                 <Media tag="a" href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -77,8 +77,8 @@ class Navigation extends React.Component {
 
                     <Nav className="mr-auto">
                         <Nav.Link href="#portraits">Self-portraits</Nav.Link>
-                        <Nav.Link href="#landscapes">Landscapes</Nav.Link>
-                        <Nav.Link href="#stilllife">Still life</Nav.Link>
+                        <Nav.Link href="#landscape">Landscapes</Nav.Link>
+                        <Nav.Link href="#stilllife">Still Life</Nav.Link>
 
                     </Nav>
                 </Navbar.Collapse>

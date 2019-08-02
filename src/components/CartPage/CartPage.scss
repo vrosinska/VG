@@ -1,0 +1,163 @@
+@import '../../styles/general.scss';
+
+.container {
+  padding-top: 80px;
+  max-width: 90vw;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.cartCont {
+  padding: 5px;
+  margin: 0;
+}
+
+.cartRow {
+  margin: 0;
+}
+
+.product {
+  border: 2px solid $color-grey;
+  margin: 20px 0;
+  //width: 100%;
+  //height: 195px;
+  position: relative;
+  -webkit-transition: margin .2s linear, opacity .2s linear;
+  -moz-transition: margin .2s linear, opacity .2s linear;
+  -o-transition: margin .2s linear, opacity .2s linear;
+  transition: margin .2s linear, opacity .2s linear;
+}
+
+.picture {
+  text-align: center;
+}
+
+.image {
+  //position: absolute;
+  //top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title {
+  color: $color-main;
+  font-size: 20px;
+  font-weight: 300;
+
+}
+
+.subtitle {
+  font-size: 15px;
+}
+
+.productCalculations {
+  height: 50px;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.product .price {
+  background: #fcfcfc;
+  color: #000;
+  float: right;
+  font-size: 20px;
+  font-weight: 300;
+  //line-height: 49px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.product .fullPrice {
+  background: $color-grey;
+  color: #fff;
+  float: right;
+  font-size: 20px;
+  font-weight: 300;
+  //line-height: 49px;
+  margin: 0;
+  padding: 0 10px;
+
+  -webkit-transition: margin .15s linear;
+  -moz-transition: margin .15s linear;
+  -o-transition: margin .15s linear;
+  transition: margin .15s linear;
+}
+
+//.quantity, .plus, .minus {
+//  display: block;
+//  float: left;
+//}
+
+.quantity {
+  font-size: 15px;
+  //line-height: 30px;
+  width: 30px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.plus, .minus {
+  background: $color-grey;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0 10px;
+  -webkit-transition: background .2s linear;
+  -moz-transition: background .2s linear;
+  -o-transition: background .2s linear;
+  transition: background .2s linear;
+}
+
+.plus:hover, .minus:hover {
+  background: $color-main;
+  color: white;
+  cursor: pointer;
+}
+
+//.plus {
+//  line-height: 50px;
+//}
+//
+//.minus {
+//  line-height: 47px;
+//}
+.total {
+  font-size: 20px;
+  float: right;
+  font-weight: bold;
+}
+
+.btn {
+  background: $color-main;
+  cursor: pointer;
+  display: block;
+  color: white !important;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 16px 0;
+  width: 290px;
+  text-align: center;
+  float: right;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.btn:hover {
+  color: $color-grey;
+  background: $color-yellow;
+}
+a {
+  color: white !important;
+}
