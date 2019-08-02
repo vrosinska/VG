@@ -10,7 +10,8 @@ function Footer() {
     return (
         <footer id="footer" className="fixed-bottom">
             <div className={classNames('row', styles.footRow1)}>
-                <div className="col-auto px-1"><a className={styles.footer1} href="#contact"> Contact </a></div>
+                <div className={classNames('col-auto px-1', styles.footer1)}>
+                    <a href="#contact">Contact</a></div>
                 <div className="col-auto px-1"><a className={styles.footer1} href="#delivery"> Delivery&Shipping</a>
                 </div>
                 <div className="col-auto px-1"><a className={styles.footer1} href="#terms"> Terms of Use</a></div>

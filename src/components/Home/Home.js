@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Home.scss'
 import {home} from "../../data/datastore";
 
-
 class Home extends React.Component {
 
     render() {
@@ -18,10 +17,7 @@ class Home extends React.Component {
                 <div className={styles.WS}>
                     <img className={styles.homeImage} src={home.laptop} alt=""/>
                 </div>
-
             </div>
-
-
         )
     }
 }
