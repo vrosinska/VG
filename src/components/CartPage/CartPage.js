@@ -41,10 +41,13 @@ class CartPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className={styles.cartSumUp}>
+                <div className={classNames("row", styles.cartSumUp)}>
                     <p className={styles.total}>Total: <span>177.16</span>$</p>
-                    <a className={styles.btn}>Checkout</a>
                 </div>
+                <div className={classNames("row", styles.checkout)}>
+                    <a href="#checkout" className={styles.btn}>Checkout</a>
+                </div>
+
             </div>
         )
     }

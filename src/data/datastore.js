@@ -98,7 +98,7 @@ const landscape =
                     id: 1,
                     name: 'Cypresses And Two Women',
                     price: 504.95,
-                    priceFramed: 454.95,
+                    priceFramed: 554.95,
                     count: 12,
                     img: '../../../public/images/CypressesAndTwoWomen.jpg',
 
@@ -346,3 +346,20 @@ export const termsOfUse = [
         text: 'Questions can be directed to our support staff by clicking on the "Contact" link in the bottom menu.'
     }
 ]
+export const thanks = {
+    headline: "Thank you very much for your order.",
+    text: "Our Team will review it shortly and will get back to you with the delivery details, including the tracking number. In the meantime, feel free to discover other Van Gogh paintings @ Van Gogh For You."
+}
+export const contact = {
+    street: 'Plac Solny 20',
+    city: '50-101 Wroclaw',
+    country: 'Poland',
+    phoneReception: '+48 123 456 789',
+    phoneOrdering: '+48 234 567 890',
+    phoneDelivery: '+48 345 678 901',
+    phoneMedia: '+48 456 789 012',
+    emailReception: 'reception@vgforyou.com.pl',
+    emailOrdering: 'ordering@vgforyou.com.pl',
+    emailDelivery: 'delivery@vgforyou.com.pl',
+    emailMedia: 'media@vgforyou.com.pl',
+}

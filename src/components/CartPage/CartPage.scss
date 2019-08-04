@@ -133,31 +133,22 @@
 //}
 .total {
   font-size: 20px;
-  float: right;
+
   font-weight: bold;
 }
 
 .btn {
-  background: $color-main;
-  cursor: pointer;
-  display: block;
-  color: white !important;
-  font-size: 20px;
-  font-weight: 300;
-  padding: 16px 0;
-  width: 290px;
-  text-align: center;
-  float: right;
-  -webkit-transition: all .2s linear;
-  -moz-transition: all .2s linear;
-  -o-transition: all .2s linear;
-  transition: all .2s linear;
+  @include btn;
 }
 
 .btn:hover {
   color: $color-grey;
   background: $color-yellow;
 }
-a {
-  color: white !important;
+.productCalculations a {
+  color: white;
+}
+.cartSumUp, .checkout {
+  justify-content: end;
+  margin: auto;
 }
