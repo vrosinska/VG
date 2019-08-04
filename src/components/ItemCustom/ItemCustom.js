@@ -51,7 +51,7 @@ class ItemCustom extends React.Component {
 
                             {this.state.showComponent ?
                                 <div className={styles.overview}>
-                                    <span> {itemData.price} USD </span>
+                                    <span> {itemData.priceFramed} USD </span>
                                     <a href="#"><FontAwesomeIcon ahref="#" className="mr-1"
                                                                  icon={faShoppingCart}
                                                                  style={{color: '#A00000'}}/>
@@ -59,7 +59,7 @@ class ItemCustom extends React.Component {
                                 </div>
                                 :
                                 <div className={styles.overview}>
-                                    <span> {itemData.priceFramed} USD </span>
+                                    <span> {itemData.price} USD </span>
                                     <a href="#"><FontAwesomeIcon ahref="#" className="mr-1"
                                                                  icon={faShoppingCart}
                                                                  style={{color: '#A00000'}}/>
