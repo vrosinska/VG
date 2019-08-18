@@ -6,17 +6,38 @@ import styles from './Navigation.scss'
 import './Navigation_Override.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import Media from 'react-bootstrap/Media';
 import classNames from "classnames";
+import App from "../../App";
 
 class Navigation extends React.Component {
 
+    updateFunction = this.updateNavigation(this)
+    updateCart = this.updateCartItems(this);
+
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
+        App.getInstance().getEmitter().addListener('itemAdded', this.updateFunction);
+        App.getInstance().getEmitter().addListener('changedQuantity', this.updateFunction);
+        App.getInstance().getEmitter().addListener('itemDeleted', this.updateCart);
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
+        App.getInstance().getEmitter().removeListener('itemAdded', this.updateFunction);
+        App.getInstance().getEmitter().removeListener('changedQuantity', this.updateFunction);
+        App.getInstance().getEmitter().addListener('itemDeleted', this.updateCart);
+    }
+
+    updateNavigation(that) {
+        return function () {
+            that.forceUpdate();
+        }
+    }
+
+    updateCartItems(that) {
+        return function () {
+            that.forceUpdate();
+        }
     }
 
     handleScroll() {
@@ -30,6 +51,12 @@ class Navigation extends React.Component {
     }
 
     render() {
+        let cartQuantity = 0.0;
+        let itemRow;
+        for (itemRow of App.getInstance().state.cart) {
+            const rowQuantity = itemRow.quantity;
+            cartQuantity += rowQuantity;
+        }
         return (
             <Navbar collapseOnSelect expand="md" className={classNames('fixed-top js-nav', styles.jsnav)}>
                 <Navbar.Brand href="#home">
@@ -39,34 +66,13 @@ class Navigation extends React.Component {
                     <Nav.Link className="nav-link-cart" href="#cartpage">
                         <ul className="navbar-nav ml-auto flex-row">
                             <li className="dropdown">
-                                <Media tag="a" href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-expanded="false">
                                     <span>
                                         <FontAwesomeIcon icon={faShoppingCart}
                                                          className={classNames('mr-1', styles.navcart)}/>
-                                                         <span className={styles.navcartitems}>7
-                                                             - Items</span>
+                                    <span className={styles.navcartitems}>
+                                        {cartQuantity} <span className={styles.navcartitemstxt}> - Items </span>
                                     </span>
-                                    <span className="caret"></span></Media>
-                                {/*        <ul className="dropdown-menu dropdown-cart" role="menu">*/}
-                                {/*            <li>*/}
-                                {/*  <span className="item">*/}
-                                {/*    <span className="item-left">*/}
-                                {/*        <img src="http://lorempixel.com/50/50/" alt=""/>*/}
-                                {/*        <span className="item-info">*/}
-                                {/*            <span>Item name</span>*/}
-                                {/*            <span>23$</span>*/}
-                                {/*        </span>*/}
-                                {/*    </span>*/}
-                                {/*    <span className="item-right">*/}
-                                {/*        <button className="btn btn-xs btn-danger pull-right">x</button>*/}
-                                {/*    </span>*/}
-                                {/*</span>*/}
-                                {/*            </li>*/}
-
-                                {/*            <li className="divider"></li>*/}
-                                {/*            <li><a className="text-center" href="">View Cart</a></li>*/}
-                                {/*        </ul>*/}
+                                    </span>
                             </li>
                         </ul>
                     </Nav.Link>
@@ -74,16 +80,12 @@ class Navigation extends React.Component {
 
                 </div>
                 <Navbar.Collapse className="navCollapse" id="basic-navbar-nav">
-
                     <Nav className="mr-auto">
                         <Nav.Link href="#portraits">Self-portraits</Nav.Link>
                         <Nav.Link href="#landscape">Landscapes</Nav.Link>
                         <Nav.Link href="#stilllife">Still Life</Nav.Link>
-
                     </Nav>
                 </Navbar.Collapse>
-
-
             </Navbar>
         )
     }

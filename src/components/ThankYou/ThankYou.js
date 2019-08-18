@@ -14,7 +14,7 @@ class ThankYou extends React.Component {
                     <div className={styles.headline}>
                         {ReactHtmlParser(thanks.headline)}
                     </div>
-                    <div className={styles.text}>
+                    <div>
                         {ReactHtmlParser(thanks.text)}
                     </div>
                 </div>

@@ -1,53 +1,67 @@
 import React from 'react';
 import styles from './CartPage.scss'
 import classNames from 'classnames';
+import App from "../../App";
+import CartItem from "../CartItem/CartItem";
+import {Link} from "react-router-dom";
+import {formatting} from "../../utils";
 
 class CartPage extends React.Component {
 
+    updateFunction = this.update(this);
+
+
+    componentDidMount() {
+        App.getInstance().getEmitter().addListener('changedQuantity', this.updateFunction);
+        App.getInstance().getEmitter().addListener('itemDeleted', this.updateFunction);
+    }
+
+    componentWillUnmount() {
+        App.getInstance().getEmitter().removeListener('changedQuantity', this.updateFunction);
+        App.getInstance().getEmitter().removeListener('itemDeleted', this.updateFunction);
+    }
+
+    update(that) {
+        return function () {
+            that.forceUpdate();
+        }
+    }
+
 
     render() {
+        App.getInstance().state.totalPrice = 0;
+        let itemRow;
+        for (itemRow of App.getInstance().state.cart) {
+            const rowPrice = itemRow.quantity * itemRow.price;
+            App.getInstance().state.totalPrice += rowPrice;
+        }
+
         return (
             <div className={styles.container}>
                 <a id="cartPage"/>
                 <h4>Your Shopping Cart</h4>
+                {App.getInstance().state.cart.map((cartItem, index) => {
+                    const cartItemProps =
+                        {
+                            ...this.props,
+                            cartItem: cartItem,
+                            index: index,
+                        };
+                    return (
+                        <CartItem key={index} {...cartItemProps}/>)
+                })}
 
-                <div className={classNames(styles.product, "row")}>
-                    <div className={classNames("col-12", styles.cartCont)}>
-                        <div className={classNames("row", styles.cartRow)}>
-                            <div className={classNames(styles.picture, "col-4")}>
-                                <img className={styles.image}
-                                     src="./../../../public/images/CypressesAndTwoWomen.jpg"
-                                     alt=""/>
-                            </div>
-                            <div className="col-8">
-                                <p className={styles.title}>Title of The Image</p>
-                                <p className={styles.subtitle}>With Frame/No Frame</p>
-                            </div>
-                        </div>
-                        <div className={classNames("row", styles.cartRow)}>
-                            <div className={classNames(styles.productCalculations, "col-4")}>
-                                <span className={styles.minus}>
-                                    <a href="#">-</a></span>
-                                <span className={styles.quantity}>2</span>
-                                <span className={styles.plus}>
-                                    <a href="#">+</a></span>
-                            </div>
-                            <div className={classNames(styles.productSum, "col-8")}>
-
-                                <span className={styles.fullPrice}> 200 $</span>
-                                <span className={styles.price}> 100 $</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className={classNames("row", styles.cartSumUp)}>
-                    <p className={styles.total}>Total: <span>177.16</span>$</p>
+                    <p>Total: <span>${formatting(App.getInstance().state.totalPrice)}</span></p>
                 </div>
-                <div className={classNames("row", styles.checkout)}>
-                    <a href="#checkout" className={styles.btn}>Checkout</a>
-                </div>
+                <div>
+                    {App.getInstance().state.totalPrice > 0 ?
 
+                        <div className={classNames("row", styles.checkout)}>
+                            <Link to="checkout" className={styles.btn}>Checkout</Link>
+                        </div>
+                        : <div/>}
+                </div>
             </div>
         )
     }

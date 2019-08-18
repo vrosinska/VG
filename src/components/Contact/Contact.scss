@@ -31,3 +31,6 @@
 .mail {
   word-wrap: break-word;
 }
+.mediaIcon {
+  @include mediaIcon;
+}

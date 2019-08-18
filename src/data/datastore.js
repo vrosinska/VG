@@ -1,14 +1,14 @@
 export const logo =
     {
         logoImage: '../../../public/images/S-logo.png',
-    }
+    };
 
 export const home =
     {
         mobile: '../../../public/images/mobileCollage.png',
         iPad: '../../../public/images/iPadCollage.png',
         laptop: '../../../public/images/WSCollage.png',
-    }
+    };
 
 const portraits =
     {
@@ -79,7 +79,7 @@ const portraits =
 
                 }
             ]
-    }
+    };
 const landscape =
     {
         title: 'Van Gogh Landscapes',
@@ -185,7 +185,7 @@ const landscape =
 
                 }
             ]
-    }
+    };
 const stilllife =
     {
         title: 'Van Gogh Still Life',
@@ -264,13 +264,13 @@ const stilllife =
 
                 }
             ]
-    }
+    };
 
 export const categoriesData = {
     portraits: portraits,
     landscape: landscape,
     stilllife: stilllife,
-}
+};
 export const deliveryNShipping = [
     {
         quest: 'Which countries do you ship to?',
@@ -292,7 +292,7 @@ export const deliveryNShipping = [
         quest: 'How long does the delivery take?',
         answer: 'Europe - up to 3 business days, US & Canada - up to 7 business days, LatAm and APAC regions - up to 10 business days.'
     }
-]
+];
 export const termsOfUse = [
     {
         headline: 'CONDITIONS OF USE',
@@ -345,11 +345,11 @@ export const termsOfUse = [
         headline: 'QUESTIONS',
         text: 'Questions can be directed to our support staff by clicking on the "Contact" link in the bottom menu.'
     }
-]
+];
 export const thanks = {
     headline: "Thank you very much for your order.",
     text: "Our Team will review it shortly and will get back to you with the delivery details, including the tracking number. In the meantime, feel free to discover other Van Gogh paintings @ Van Gogh For You."
-}
+};
 export const contact = {
     street: 'Plac Solny 20',
     city: '50-101 Wroclaw',
@@ -362,4 +362,4 @@ export const contact = {
     emailOrdering: 'ordering@vgforyou.com.pl',
     emailDelivery: 'delivery@vgforyou.com.pl',
     emailMedia: 'media@vgforyou.com.pl',
-}
+};

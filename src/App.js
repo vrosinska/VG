@@ -16,8 +16,31 @@ import {
     Switch,
     HashRouter
 } from "react-router-dom";
+import {EventEmitter} from "events";
+
 
 class App extends React.Component {
+    state = {
+        cart: [],
+        totalPrice: 0,
+    };
+
+    static instance = {};
+
+    static getInstance() {
+        return App.instance;
+    }
+
+    constructor(props, context) {
+        super(props, context);
+        this.emitter = new EventEmitter();
+        App.instance = this;
+    };
+
+    getEmitter = function () {
+        return this.emitter;
+    };
+
     render() {
         return (
             <HashRouter>
@@ -34,7 +57,6 @@ class App extends React.Component {
                             <Route exact path="/thanks" component={ThankYou}/>
                             <Route exact path="/delivery" component={DeliveryNShipping}/>
                             <Route exact path="/terms" component={TermsOfUse}/>
-                            <Route exact path="/itemcustom" component={ItemCustom}/>
                             <Route path="/:categoryPath/:itemId" render={(props) => <ItemCustom {...props}/>}/>
                             <Route path="/:path" render={(props) => <Categories {...props} />}/>
                         </Switch>

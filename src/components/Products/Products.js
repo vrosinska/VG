@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Products.scss'
-// import {portraits} from "../../data/datastore";
 import ReactHtmlParser from 'react-html-parser';
 import classNames from 'classnames';
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
+import {Link} from "react-router-dom";
 
 class Products extends React.Component {
 
@@ -21,7 +21,7 @@ class Products extends React.Component {
 
 
     static generateItemUrl(categoryId, itemId) {
-        return "#" + categoryId + "/" + itemId;
+        return categoryId + "/" + itemId;
     }
 
     render() {
@@ -34,16 +34,18 @@ class Products extends React.Component {
                         return (
                             <div className="col-md-4 col-sm-6 col-lg-3" key={id}>
                                 <div className={classNames(styles.thumbCont, 'img-thumbnail')}>
-                                    <a href="#"/>
                                     <div className={styles.imgCont}>
                                         <img className={styles.image} src={item.img} alt=""
                                              style={{width: '100%'}}/>
                                         <div className={styles.overview}>
                                             <p> from ${item.price}</p>
-                                            <a href={Products.generateItemUrl(this.props.categoryId, id)}><FontAwesomeIcon ahref="#"
+                                            {/*alternative solution for Link using params in text*/}
+                                            {/*<Link to={`${this.props.categoryId}/${id}`}><FontAwesomeIcon*/}
+                                            <Link
+                                                to={Products.generateItemUrl(this.props.categoryId, id)}><FontAwesomeIcon
                                                 className="mr-1"
                                                 icon={faShoppingCart}
-                                                style={{color: '#A00000'}}/></a>
+                                                style={{color: '#A00000'}}/></Link>
                                         </div>
                                     </div>
                                     <div className="caption">
