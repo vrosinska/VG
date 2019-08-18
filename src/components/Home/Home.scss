@@ -1,3 +1,4 @@
+@import '../../styles/general.scss';
 a.home {
   size: 0;
 }
@@ -9,6 +10,7 @@ a.home {
   right: 0;
   top: 0;
   bottom: 0;
+  filter: drop-shadow(0 0 30px $color-grey);
 }
 
 @media (max-width: 576px) {

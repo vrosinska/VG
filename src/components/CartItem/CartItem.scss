@@ -1,0 +1,146 @@
+@import '../../styles/general.scss';
+
+.container {
+  padding-top: 80px;
+  max-width: 90vw;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.cartCont {
+  padding: 5px;
+  margin: 0;
+}
+
+.cartRow {
+  margin: 0;
+}
+
+.product {
+  border: 2px solid $color-grey;
+  margin: 20px 0;
+  position: relative;
+  max-height: 70vh;
+  -webkit-transition: margin .2s linear, opacity .2s linear;
+  -moz-transition: margin .2s linear, opacity .2s linear;
+  -o-transition: margin .2s linear, opacity .2s linear;
+  transition: margin .2s linear, opacity .2s linear;
+
+  .price {
+    color: #000;
+    opacity: 0.5;
+    float: right;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 10px;
+    @media (max-width:368px) {
+      display: none;
+    }
+  }
+
+  .fullPrice {
+    background: $color-grey;
+    color: #fff;
+    float: right;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 10px;
+    -webkit-transition: margin .15s linear;
+    -moz-transition: margin .15s linear;
+    -o-transition: margin .15s linear;
+    transition: margin .15s linear;
+  }
+}
+
+.picture {
+  text-align: center;
+}
+
+.image {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title {
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  a {
+    color: $color-grey;
+  }
+}
+
+.subtitle {
+  font-size: 2vw;
+}
+
+.productCalculations {
+  height: 40px;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.quantity {
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.plus, .minus {
+  background: $color-grey;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0 10px;
+  -webkit-transition: background .2s linear;
+  -moz-transition: background .2s linear;
+  -o-transition: background .2s linear;
+  transition: background .2s linear;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.plus:hover, .minus:hover {
+  background: $color-main;
+  color: white;
+  cursor: pointer;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.productCalculations a {
+  color: white;
+}
+
+.delete {
+  color: $color-grey;
+  position: absolute;
+  right: 6px;
+  margin: auto;
+  top: 1rem;
+
+  :hover {
+    color: $color-main;
+    cursor: pointer;
+  }
+}
