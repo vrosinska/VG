@@ -2,18 +2,20 @@ import React from 'react';
 import styles from './CheckoutForm.scss'
 import classNames from "classnames";
 import App from "../../App";
-import {Link} from "react-router-dom";
 import {formatting} from "../../utils";
+import Button from 'react-bootstrap/Button';
 
 class CheckoutForm extends React.Component {
     state = {
         cart: []
     };
-    emptyCart = () => {
+    emptyCart = (event) => {
+        event.preventDefault();
         App.getInstance().setState({
             cart: [],
             totalPrice: 0,
         });
+        window.location="#thanks";
     };
 
     render() {
@@ -23,11 +25,11 @@ class CheckoutForm extends React.Component {
                 <h4>Checkout</h4>
 
                 <div className={classNames("row", styles.formCont)}>
-                    <form action="https://formspree.io/19456w@gmail.com" method="POST">
+                    <form action="https://formspree.io/19456w@gmail.com" method="POST" onSubmit={this.emptyCart}>
                         <div className="row">
                             <div className={classNames("col-lg-6 col-sm-12", styles.form)}>
                                 <p>
-                                    <input className="form-control" name="name"
+                                    <input name="name"
                                            placeholder="Your first name and surname"
                                            required type="text"/>
                                 </p>
@@ -53,7 +55,7 @@ class CheckoutForm extends React.Component {
                                     <p>Total: <span>${formatting(App.getInstance().state.totalPrice)}</span></p>
                                 </div>
                                 <div className={classNames("row", styles.checkout)}>
-                                    <Link to="thanks" className={styles.btn} onClick={this.emptyCart}>Checkout</Link>
+                                    <Button className={styles.btn} type="submit" value="SEND">Checkout</Button>
                                 </div>
                             </div>
                         </div>
