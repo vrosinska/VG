@@ -32,10 +32,6 @@ a.nav-link-cart :hover {
         font-size: 20px;
         background-color: #A00000;
     }
-
-    .navbar-light .navCollapse {
-        background: url("./../../../public/images/background.jpg");
-    }
 }
 
 @media (min-width: 768px) {

@@ -1,6 +1,7 @@
 @import '../../styles/general.scss';
-a.home {
-  size: 0;
+.container {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .homeImage {
@@ -16,7 +17,7 @@ a.home {
 @media (max-width: 576px) {
   .mobile {
     display: block;
-    height: 100vh;
+    //height: 100vh;
   }
   .homeImage {
     max-height: 70vh;
@@ -32,10 +33,10 @@ a.home {
 @media (min-width: 577px) and (max-width: 768px) {
   .iPad {
     display: block;
-    height: 100vh;
+    //height: 100vh;
   }
   .homeImage {
-    max-height: 75vh;
+    max-height: 70vh;
     max-width: 90vw;
   }
   .mobile {
@@ -49,11 +50,11 @@ a.home {
 @media (min-width: 769px) {
   .WS {
     display: block;
-    height: 100vh;
+    //height: 100vh;
   }
   .homeImage {
     max-height: 75vh;
-    max-width: 90vw;
+    max-width: 75vw;
   }
   .mobile {
     display: none;
@@ -63,10 +64,26 @@ a.home {
   }
 }
 
+@media (min-width: 769px) and (min-height: 992px){
+  .iPad {
+    display: block;
+    //height: 100vh;
+  }
+  .homeImage {
+    max-height: 70vh;
+  }
+  .mobile {
+    display: none;
+  }
+  .WS {
+    display: none;
+  }
+}
+
 @media (min-width: 500px) and (max-height: 430px) {
   .WS {
     display: block;
-    height: 100vh;
+    //height: 100vh;
   }
   .homeImage {
     max-height: 50vh;
@@ -78,3 +95,4 @@ a.home {
     display: none;
   }
 }
+

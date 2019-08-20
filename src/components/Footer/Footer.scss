@@ -23,6 +23,8 @@ a:hover {
 
 .footRow1 {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   justify-content: center;
   background-color: $color-grey;
   margin: auto 1px;
@@ -30,6 +32,8 @@ a:hover {
 
 .footRow2 {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.95);
 }

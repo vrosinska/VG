@@ -6,6 +6,15 @@ import {Link} from "react-router-dom";
 import {formatting} from "../../utils";
 
 class CheckoutForm extends React.Component {
+    state = {
+        cart: []
+    };
+    emptyCart = () => {
+        App.getInstance().setState({
+            cart: [],
+            totalPrice: 0,
+        });
+    };
 
     render() {
         return (
@@ -44,7 +53,7 @@ class CheckoutForm extends React.Component {
                                     <p>Total: <span>${formatting(App.getInstance().state.totalPrice)}</span></p>
                                 </div>
                                 <div className={classNames("row", styles.checkout)}>
-                                    <Link to="thanks" className={styles.btn}>Checkout</Link>
+                                    <Link to="thanks" className={styles.btn} onClick={this.emptyCart}>Checkout</Link>
                                 </div>
                             </div>
                         </div>

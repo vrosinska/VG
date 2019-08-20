@@ -11,34 +11,27 @@ import App from "../../App";
 
 class Navigation extends React.Component {
 
-    updateFunction = this.updateNavigation(this)
-    updateCart = this.updateCartItems(this);
+    updateFunction = this.update(this)
+
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
-        App.getInstance().getEmitter().addListener('itemAdded', this.updateFunction);
         App.getInstance().getEmitter().addListener('changedQuantity', this.updateFunction);
-        App.getInstance().getEmitter().addListener('itemDeleted', this.updateCart);
+        App.getInstance().getEmitter().addListener('itemDeleted', this.updateFunction);
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
-        App.getInstance().getEmitter().removeListener('itemAdded', this.updateFunction);
         App.getInstance().getEmitter().removeListener('changedQuantity', this.updateFunction);
-        App.getInstance().getEmitter().addListener('itemDeleted', this.updateCart);
+        App.getInstance().getEmitter().addListener('itemDeleted', this.updateFunction);
     }
 
-    updateNavigation(that) {
+    update(that) {
         return function () {
             that.forceUpdate();
         }
     }
 
-    updateCartItems(that) {
-        return function () {
-            that.forceUpdate();
-        }
-    }
 
     handleScroll() {
         let scrollY = window.scrollY;
