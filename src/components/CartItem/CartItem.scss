@@ -4,7 +4,7 @@
   padding-top: 80px;
   max-width: 90vw;
   margin: auto;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 
 .cartCont {
@@ -20,7 +20,6 @@
   border: 2px solid $color-grey;
   margin: 20px 0;
   position: relative;
-  max-height: 70vh;
   -webkit-transition: margin .2s linear, opacity .2s linear;
   -moz-transition: margin .2s linear, opacity .2s linear;
   -o-transition: margin .2s linear, opacity .2s linear;
@@ -29,28 +28,14 @@
   .price {
     color: #000;
     opacity: 0.5;
-    float: right;
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: 300;
     margin: 0;
     padding: 0 10px;
-    @media (max-width:368px) {
-      display: none;
-    }
   }
 
-  .fullPrice {
-    background: $color-grey;
-    color: #fff;
-    float: right;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0 10px;
-    -webkit-transition: margin .15s linear;
-    -moz-transition: margin .15s linear;
-    -o-transition: margin .15s linear;
-    transition: margin .15s linear;
+  .row2 {
+    margin-bottom: 1rem;
   }
 }
 
@@ -75,35 +60,43 @@
   font-weight: 300;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 3vw;
+  font-size: 2vw;
+
   a {
     color: $color-grey;
   }
 }
 
 .subtitle {
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 .productCalculations {
-  height: 40px;
   margin: auto;
   padding: 0;
+}
+
+.col1 {
   text-align: center;
 }
 
+.col2 {
+  text-align: right;
+  right: 1rem;
+}
+
 .quantity {
-  font-size: 15px;
+  font-size: 2vw;
   width: 30px;
   text-align: center;
   padding: 0 10px;
 }
 
-.plus, .minus {
+.plus, .minus, .fullPrice {
   background: $color-grey;
   color: white;
   border: none;
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: 300;
   padding: 0 10px;
   -webkit-transition: background .2s linear;
@@ -117,16 +110,17 @@
   user-select: none;
 }
 
+.fullPrice {
+  text-align: right;
+  right: 1rem;
+}
+
 .plus:hover, .minus:hover {
   background: $color-main;
   color: white;
   cursor: pointer;
 }
 
-.total {
-  font-size: 20px;
-  font-weight: bold;
-}
 
 .productCalculations a {
   color: white;
@@ -135,7 +129,7 @@
 .delete {
   color: $color-grey;
   position: absolute;
-  right: 6px;
+  right: 1rem;
   margin: auto;
   top: 1rem;
 
@@ -143,4 +137,5 @@
     color: $color-main;
     cursor: pointer;
   }
+
 }

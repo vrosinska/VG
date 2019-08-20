@@ -17,6 +17,8 @@
 .navitems {
   justify-content: space-between;
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   margin-right: 2px;
 }
 

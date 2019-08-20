@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTrash} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 import {formatting} from "../../utils";
+import './CartItem_Override.css';
 
 class CartItem extends React.Component {
 
@@ -66,27 +67,28 @@ class CartItem extends React.Component {
                                      alt=""/>
                             </div>
                             <div className="col-8">
-                                <div className={styles.delete} onClick={this.deleteFromCart}><FontAwesomeIcon
-                                    icon={faTrash}
-                                />
-                                </div>
-                                <p className={styles.title}><Link to={this.state.cartItem.url}>{this.state.cartItem.name}</Link></p>
+                                <p className={styles.title}><Link to={this.state.cartItem.url}>{this.state.cartItem.name}</Link>
+                                    <div className={styles.delete} onClick={this.deleteFromCart}><FontAwesomeIcon
+                                        icon={faTrash}
+                                    />
+                                    </div></p>
                                 <p className={styles.subtitle}>
                                     {this.state.cartItem.frame ? 'With Frame' : 'No Frame'}</p>
                             </div>
                         </div>
-                        <div className={classNames("row", styles.cartRow)}>
-                            <div className={classNames(styles.productCalculations, "col-4")}>
+                        <div className={classNames("row", styles.cartRow, styles.row2)}>
+                            <div className={classNames(styles.productCalculations, styles.col1, "col-4")}>
                                 <span className={styles.minus} onClick={this.decreaseQuantity}>
                                     -</span>
                                 <span className={styles.quantity}>{this.state.cartItem.quantity}</span>
                                 <span className={styles.plus} onClick={this.increaseQuantity}>
                                     +</span>
                             </div>
-                            <div className="col-8">
+                            <div className={classNames(styles.productCalculations, styles.col2, "col-8")}>
 
-                                <span className={styles.fullPrice}> {formatting(fullPrice)}</span>
                                 <span className={styles.price}> {this.state.cartItem.price}</span>
+                                <span className={styles.fullPrice}> {formatting(fullPrice)}</span>
+
 
                             </div>
                         </div>

@@ -26,15 +26,10 @@ class ItemCustom extends React.Component {
                 found = true;
                 if (cartItem.quantity < item.count) {
                     cartItem.quantity++;
-                    // return cartItem;
                 } else {
                     alert("We are really sorry. You exceeded the number of our stock reserves. Please contact us for larger orders => special discounts will apply. Thanks.")
-                    // return cartItem;
                 }
             }
-            // else {
-            //     return cartItem;
-            // }
             return cartItem;
         });
         //if item IS NOT found, push product to cart with quantity: 1
@@ -52,9 +47,7 @@ class ItemCustom extends React.Component {
         }
 
         App.getInstance().setState({cart: updatedCart});
-        //send event to other components
-        App.getInstance().getEmitter().emit('itemAdded', {});
-        console.log(updatedCart)
+
     };
 
 
@@ -67,7 +60,7 @@ class ItemCustom extends React.Component {
                 <a id="itemcustom"/>
                 <h4>{itemData.name}</h4>
                 <div className={classNames('row', styles.rowCont)}>
-                    <div className={classNames('col-12 col-sm-6', styles.cont1)}>
+                    <div className={classNames('col-12 col-lg-9', styles.cont1)}>
                         {this.state.showComponent ?
                             <div id="frame" className={styles.frame}>
                                 <img className={styles.image}
@@ -81,7 +74,7 @@ class ItemCustom extends React.Component {
                             </div>
                         }
                     </div>
-                    <div className={classNames('col-12 col-sm-6', styles.cont2)}>
+                    <div className={classNames('col-12 col-lg-3', styles.cont2)}>
                         <div className={styles.col2Cont}>
                             <div className={styles.radios}>
                                 <label>
