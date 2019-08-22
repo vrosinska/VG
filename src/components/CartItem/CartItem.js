@@ -23,9 +23,8 @@ class CartItem extends React.Component {
         if (currentState.cartItem.quantity < currentState.cartItem.stock) {
             currentState.cartItem.quantity++;
             App.getInstance().getEmitter().emit('changedQuantity', currentState.cartItem);
-        }
-        else {
-            alert ("We are really sorry. You exceeded the number of our stock reserves. Please contact us for larger orders => special discounts will apply. Thanks.")
+        } else {
+            alert("We are really sorry. You exceeded the number of our stock reserves. Please contact us for larger orders => special discounts will apply. Thanks.")
             App.getInstance().getEmitter().emit('changedQuantity', currentState.cartItem);
         }
 
@@ -67,11 +66,13 @@ class CartItem extends React.Component {
                                      alt=""/>
                             </div>
                             <div className="col-8">
-                                <p className={styles.title}><Link to={this.state.cartItem.url}>{this.state.cartItem.name}</Link>
+                                <p className={styles.title}><Link
+                                    to={this.state.cartItem.url}>{this.state.cartItem.name}</Link>
                                     <div className={styles.delete} onClick={this.deleteFromCart}><FontAwesomeIcon
                                         icon={faTrash}
                                     />
-                                    </div></p>
+                                    </div>
+                                </p>
                                 <p className={styles.subtitle}>
                                     {this.state.cartItem.frame ? 'With Frame' : 'No Frame'}</p>
                             </div>

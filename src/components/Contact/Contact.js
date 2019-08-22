@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Contact.scss'
 import {contact} from "../../data/datastore";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebookF, faInstagram, faTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {faFacebookF, faTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import {faMapMarkerAlt, faPhoneAlt, faAt} from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 
@@ -16,8 +16,6 @@ class Contact extends React.Component {
                 <div className={classNames("row list-unstyled", styles.contactCont)}>
                     <li className={styles.mediaIcon}><FontAwesomeIcon icon={faFacebookF}
                                                                       style={{color: '#4968ad'}}/>
-                    </li>
-                    <li className={styles.mediaIcon}><FontAwesomeIcon icon={faInstagram} style={{color: 'black'}}/>
                     </li>
                     <li className={styles.mediaIcon}><FontAwesomeIcon icon={faTwitter} style={{color: '#49a1eb'}}/>
                     </li>

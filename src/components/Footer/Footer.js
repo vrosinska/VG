@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.scss'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebookF, faTwitter, faInstagram, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {faFacebookF, faTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import {logo} from "../../data/datastore";
 import classNames from "classnames";
 import {Link} from 'react-router-dom';
@@ -11,8 +11,10 @@ function Footer() {
         <footer id="footer" className="fixed-bottom">
             <div className={classNames('row', styles.footRow1)}>
                 <div className={classNames('col-auto px-1', styles.footer1)}>
-                    <Link to='contact'> Contact </Link>|</div>
-                <div className={classNames('col-auto px-1', styles.footer1)}><Link to="delivery"> Delivery&Shipping </Link>|
+                    <Link to='contact'> Contact </Link>|
+                </div>
+                <div className={classNames('col-auto px-1', styles.footer1)}><Link
+                    to="delivery"> Delivery&Shipping </Link>|
                 </div>
                 <div className={classNames('col-auto px-1', styles.footer1)}><Link to="terms"> Terms of Use</Link></div>
             </div>
@@ -25,8 +27,6 @@ function Footer() {
                 </div>
                 <div className="d-none d-md-flex justify-content-center col-4 list-unstyled">
                     <li className={styles.mediaIcon}><FontAwesomeIcon icon={faFacebookF} style={{color: '#4968ad'}}/>
-                    </li>
-                    <li className={styles.mediaIcon}><FontAwesomeIcon icon={faInstagram} style={{color: 'black'}}/>
                     </li>
                     <li className={styles.mediaIcon}><FontAwesomeIcon icon={faTwitter} style={{color: '#49a1eb'}}/>
                     </li>

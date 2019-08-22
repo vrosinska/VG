@@ -15,7 +15,7 @@ class CheckoutForm extends React.Component {
             cart: [],
             totalPrice: 0,
         });
-        window.location="#thanks";
+        window.location = "#thanks";
     };
 
     render() {
@@ -29,7 +29,7 @@ class CheckoutForm extends React.Component {
                         <div className="row">
                             <div className={classNames("col-lg-6 col-sm-12", styles.form)}>
                                 <p>
-                                    <input name="name"
+                                    <input className="form-control" name="name"
                                            placeholder="Your first name and surname"
                                            required type="text"/>
                                 </p>

@@ -6,13 +6,15 @@
   margin: auto;
   padding-bottom: 80px;
 }
+
 .btn {
   @include btn;
-  }
+}
+
 .btn:hover {
-    color: $color-grey;
-    background: $color-yellow;
-  }
+  color: $color-grey;
+  background: $color-yellow;
+}
 
 .cartSumUp, .checkout {
   justify-content: flex-end;
