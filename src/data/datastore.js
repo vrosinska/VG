@@ -21,6 +21,7 @@ const portraits =
                     price: 304.95,
                     priceFramed: 354.95,
                     count: 12,
+                    size: '43.20 x 31.30',
                     img: '../../../public/images/SelfPortrait.jpg',
 
                 },
@@ -30,6 +31,7 @@ const portraits =
                     price: 234.95,
                     priceFramed: 284.95,
                     count: 12,
+                    size: '41.00 x 33.00',
                     img: '../../../public/images/SelfPortrait2.jpg',
 
                 },
@@ -39,6 +41,7 @@ const portraits =
                     price: 309.95,
                     priceFramed: 359.95,
                     count: 12,
+                    size: '27.20 x 19.00',
                     img: '../../../public/images/SelfPortrait3.jpg',
 
                 },
@@ -48,6 +51,7 @@ const portraits =
                     price: 300.95,
                     priceFramed: 350.95,
                     count: 12,
+                    size: '65.10 x 50.00',
                     img: '../../../public/images/SelfPortraitAsAPainter.jpg',
 
                 },
@@ -57,6 +61,7 @@ const portraits =
                     price: 294.95,
                     priceFramed: 344.95,
                     count: 12,
+                    size: '44.50 x 37.20',
                     img: '../../../public/images/SelfPortraitWithGreyFeltHat.jpg',
 
                 },
@@ -66,6 +71,7 @@ const portraits =
                     price: 304.95,
                     priceFramed: 354.95,
                     count: 12,
+                    size: '42.50 x 32.10',
                     img: '../../../public/images/SelfPortraitWithStrawHatAndPipe.jpg',
 
                 },
@@ -75,6 +81,7 @@ const portraits =
                     price: 234.95,
                     priceFramed: 284.95,
                     count: 12,
+                    size: '46.00 x 38.00',
                     img: '../../../public/images/SelfPortraitWithPipe.jpg',
 
                 }
@@ -91,6 +98,7 @@ const landscape =
                     price: 304.95,
                     priceFramed: 354.95,
                     count: 12,
+                    size: '49.40 x 65.30',
                     img: '../../../public/images/ByTheSeine.jpg',
 
                 },
@@ -100,6 +108,7 @@ const landscape =
                     price: 504.95,
                     priceFramed: 554.95,
                     count: 12,
+                    size: '43.50 x 27.20',
                     img: '../../../public/images/CypressesAndTwoWomen.jpg',
 
                 },
@@ -109,6 +118,7 @@ const landscape =
                     price: 324.95,
                     priceFramed: 374.95,
                     count: 12,
+                    size: '60.00 x 74.50',
                     img: '../../../public/images/EntranceToQuarry.jpg',
 
                 },
@@ -118,6 +128,7 @@ const landscape =
                     price: 334.95,
                     priceFramed: 364.95,
                     count: 12,
+                    size: '75.00 x 113.00',
                     img: '../../../public/images/GardenWithCourtingCouples.jpg',
 
                 },
@@ -127,6 +138,7 @@ const landscape =
                     price: 404.95,
                     priceFramed: 454.95,
                     count: 12,
+                    size: '50.20 x 101.00',
                     img: '../../../public/images/LandscapeAtTwilight.jpg',
 
                 },
@@ -136,6 +148,7 @@ const landscape =
                     price: 304.95,
                     priceFramed: 354.95,
                     count: 12,
+                    size: '29.40 x 36.50',
                     img: '../../../public/images/ReminiscenceOfBrabant.jpg',
 
                 },
@@ -145,6 +158,7 @@ const landscape =
                     price: 314.95,
                     priceFramed: 364.95,
                     count: 12,
+                    size: '33.00 x 42.00',
                     img: '../../../public/images/SquareSaintPierreAtSunset.jpg',
 
                 },
@@ -154,6 +168,7 @@ const landscape =
                     price: 304.95,
                     priceFramed: 354.95,
                     count: 12,
+                    size: '32.10 x 40.50',
                     img: '../../../public/images/TheBridgeAtCourbevoie.jpg',
 
                 },
@@ -163,6 +178,7 @@ const landscape =
                     price: 294.95,
                     priceFramed: 344.95,
                     count: 12,
+                    size: '65.00 x 81.00',
                     img: '../../../public/images/ThePinkOrchard.jpg',
 
                 },
@@ -172,6 +188,7 @@ const landscape =
                     price: 344.95,
                     priceFramed: 394.95,
                     count: 12,
+                    size: '46.20 x 55.20',
                     img: '../../../public/images/TreesAndUndergrowth.jpg',
 
                 },
@@ -181,6 +198,7 @@ const landscape =
                     price: 309.95,
                     priceFramed: 359.95,
                     count: 12,
+                    size: '50.50 x 103.00',
                     img: '../../../public/images/WheatfieldWithCrows.jpg',
 
                 }
@@ -197,6 +215,7 @@ const stilllife =
                     price: 304.95,
                     priceFramed: 354.95,
                     count: 12,
+                    size: '45.00 x 60.40',
                     img: '../../../public/images/BasketOfApples.jpg',
 
                 },
@@ -206,6 +225,7 @@ const stilllife =
                     price: 384.95,
                     priceFramed: 434.95,
                     count: 12,
+                    size: '35.00 x 27.00',
                     img: '../../../public/images/GlassWithYellowRoses.jpg',
 
                 },
@@ -215,6 +235,7 @@ const stilllife =
                     price: 304.95,
                     priceFramed: 354.95,
                     count: 12,
+                    size: '92.70 x 73.90',
                     img: '../../../public/images/Irises.jpg',
 
                 },
@@ -224,6 +245,7 @@ const stilllife =
                     price: 294.95,
                     priceFramed: 344.95,
                     count: 12,
+                    size: '32.70 x 40.80',
                     img: '../../../public/images/Shoes.jpg',
 
                 },
@@ -233,6 +255,7 @@ const stilllife =
                     price: 434.95,
                     priceFramed: 484.95,
                     count: 12,
+                    size: '95.00 x 73.00',
                     img: '../../../public/images/Sunflowers.jpg',
 
                 },
@@ -242,6 +265,7 @@ const stilllife =
                     price: 484.95,
                     priceFramed: 534.95,
                     count: 12,
+                    size: '72.40 x 91.30',
                     img: '../../../public/images/TheBedroom.jpg',
 
                 },
@@ -251,6 +275,7 @@ const stilllife =
                     price: 394.95,
                     priceFramed: 444.95,
                     count: 12,
+                    size: '82.00 x 114.00',
                     img: '../../../public/images/ThePotatoEaters.jpg',
 
                 },
@@ -260,6 +285,7 @@ const stilllife =
                     price: 354.95,
                     priceFramed: 404.95,
                     count: 12,
+                    size: '24.50 x 33.50',
                     img: '../../../public/images/WildRoses.jpg',
 
                 }

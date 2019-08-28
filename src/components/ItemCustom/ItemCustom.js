@@ -58,7 +58,8 @@ class ItemCustom extends React.Component {
         return (
             <div className={styles.container}>
                 <a id="itemcustom"/>
-                <h4>{itemData.name}</h4>
+                <span className={styles.title}><h4 className={styles.name}>{itemData.name}</h4>
+                    <div className={styles.size}> {itemData.size} (cm) </div></span>
                 <div className={classNames('row', styles.rowCont)}>
                     <div className={classNames('col-12 col-lg-9', styles.cont1)}>
                         {this.state.showComponent ?
