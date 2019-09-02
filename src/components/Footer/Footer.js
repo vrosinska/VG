@@ -11,12 +11,12 @@ function Footer() {
         <footer id="footer" className="fixed-bottom">
             <div className={classNames('row', styles.footRow1)}>
                 <div className={classNames('col-auto px-1', styles.footer1)}>
-                    <Link to='contact'> Contact </Link>|
+                    <Link to='/contact'> Contact </Link>|
                 </div>
                 <div className={classNames('col-auto px-1', styles.footer1)}><Link
-                    to="delivery"> Delivery&Shipping </Link>|
+                    to='/delivery'> Delivery&Shipping </Link>|
                 </div>
-                <div className={classNames('col-auto px-1', styles.footer1)}><Link to="terms"> Terms of Use</Link></div>
+                <div className={classNames('col-auto px-1', styles.footer1)}><Link to='/terms'> Terms of Use</Link></div>
             </div>
             <div className={classNames('row', styles.footRow2)}>
                 <div className="col-md-4 col-xs-12 d-flex justify-content-center">
